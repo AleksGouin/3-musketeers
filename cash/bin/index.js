@@ -3,7 +3,12 @@
 const Conf = require('conf');
 const helpers = require('./helpers.js');
 const cash = require('./cash.js');
-
+ /**
+@description: Take the parameters the user wants to put, then call cash().
+@param: {int} amount		The amount of money to convert 
+		{string} to			The list of currencies to convert the amount into
+		{string} from		The currency of the amount to convert
+ **/
 const config = new Conf();
 
 const argv = process.argv.slice(2);

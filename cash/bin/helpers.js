@@ -4,6 +4,11 @@ const updateNotifier = require('update-notifier');
 const Conf = require('conf');
 const pkg = require('../package.json');
 
+/**
+@description: Call the function that you can call when you execute the convert
+@param: {string} argv The argument you can pass as parameters (help, version, save)
+@return: Depending of what you put as parameter: help will display the help of the commands, version the current version number and save will save the currencies as default currencies
+**/
 const config = new Conf();
 
 updateNotifier({pkg}).notify();
