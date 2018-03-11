@@ -12,7 +12,7 @@ test('should return a Number', () => {
 });
 
 test('should return a Big number', () => {
-  expect(convert(2, 'BTC', 'BTC', 'Big')).toBe(2);
+  expect(convert(2, 'BTC', 'BTC', 'Big')).toEqual(Big(2));
 });
 
 test('should return a String', () => {
@@ -24,7 +24,7 @@ test('should convert an integer', () => {
 });
 
 test('should convert a number', () => {
-  //convert(1234567.89012345, 'BTC', 'Satoshi', 'Number');
+  expect(convert(1234567.89012345, 'BTC', 'Satoshi', 'Number')).toBe(123456789012345);
 });
 
 test('should convert a string', () => {
@@ -32,11 +32,11 @@ test('should convert a string', () => {
 });
 
 test('should convert a Big number', () => {
-  //convert(new Big(2), 'BTC', 'BTC', 'Number');
+  expect(convert(new Big(2), 'BTC', 'BTC', 'Number')).toBe(2);
 });
 
 test('should convert a NaN to a Number', () => {
-  //convert(NaN, 'BTC', 'BTC', 'Number');
+  console.log(convert(NaN, 'BTC', 'BTC', 'Number'));
   //convert(NaN, 'BTC', 'mBTC', 'Number');
 });
 
